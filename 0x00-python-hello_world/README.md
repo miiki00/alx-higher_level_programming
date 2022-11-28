@@ -2,7 +2,7 @@
 
 ## Description
 This is an introduction course to python given from our school ALX SE programe<br>
-Python is a high level power full programming language that is knon for it's easy to learn
+Python is a high level power full programming language that is knon for it's easy to learn <br>
 syntaxs. It was created by Guido van Rossum in the 1980s.You can read more about python here: <br>
 [python (programming language)](https://en.wikipedia.org/wiki/Python_(programming_language))<br>
 
