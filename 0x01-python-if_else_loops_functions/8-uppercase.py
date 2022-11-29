@@ -9,4 +9,4 @@ def uppercase(str):
         n = ord(str[i])
         check = n >= ord('a') and n <= ord('z')
         print("{:s}".format(chr(n - 32) if check else str[i]), end="")
-    print("")
+    print("{:s}".format('\n'), end='')
