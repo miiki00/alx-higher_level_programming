@@ -5,8 +5,11 @@
 #
 # Return: void
 def uppercase(str):
-    for i in range(len(str)):
-        n = ord(str[i])
+    length = len(str)
+    for i in range(length + 1):
+        if i == length:
+            n = 10
+        else:
+            n = ord(str[i])
         check = n >= ord('a') and n <= ord('z')
-        print("{:s}".format(chr(n - 32) if check else str[i]), end="")
-    print("{:s}".format('\n'), end='')
+        print("{:s}".format(chr(n - 32) if check else chr(n)), end="")
