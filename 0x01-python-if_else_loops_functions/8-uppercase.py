@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 
-# uppercase - prints a string in uppper case.
-# str: The string to be printed in upper case.
-#
-# Return: void
 def uppercase(str):
     last = ""
     for s in str:
