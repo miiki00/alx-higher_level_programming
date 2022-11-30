@@ -25,7 +25,6 @@ void free_listint(listint_t *head);
 int check_cycle(listint_t *list);
 listint_t **array_malloc(size_t);
 listint_t **array_realloc(listint_t **, size_t);
-int copy_array(listint_t **, listint_t **);
 ssize_t array_len(listint_t **);
 
 #endif /* LISTS_H */
