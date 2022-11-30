@@ -18,26 +18,6 @@ ssize_t array_len(listint_t **arr)
 }
 
 /**
- * copy_array - copies values from array @from to array @to.
- * if array @to can't handle the values in array @from it may
- * cause segmentation fault or other memory related error.
- * @from: The array to copy from.
- * @to: The array to copy to.
- *
- * Return: 1 (success), -1 (error)
- */
-int copy_array(listint_t **from, listint_t **to)
-{
-	ssize_t i;
-
-	if (from == NULL || to == NULL || from == to)
-		return (-1);
-	for (i = 0; from[i] != NULL; i++)
-		to[i] = from[i];
-	return (1);
-}
-
-/**
  * array_malloc - allocats @size number of memory for listint_t pointers
  * and initializes their value to null and also adds 1 more for the
  * terminating NULL value of the array.
@@ -81,8 +61,8 @@ listint_t **array_realloc(listint_t **arr_ptr, size_t size)
 	new = array_malloc(tmp);
 	if (new == NULL)
 		return (NULL);
-	if (copy_array(arr_ptr, new) == -1)
-		return (NULL);
+	for (tmp = 0; arr_ptr[tmp] != NULL; tmp++)
+		new[tmp] = arr_ptr[tmp];
 	free(arr_ptr);
 	return (new);
 }
