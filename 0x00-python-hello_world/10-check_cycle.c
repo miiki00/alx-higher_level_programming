@@ -100,7 +100,7 @@ int check_cycle(listint_t *list)
 
 	if (list == NULL || list->next == NULL)
 		return (0);
-	dump = array_malloc(10);
+	dump = array_malloc(50);
 	if (dump == NULL)
 		return (0);
 	for (i = 0; list != NULL; list = list->next, i++)
@@ -113,8 +113,8 @@ int check_cycle(listint_t *list)
 				return (1);
 			}
 		}
-		if (j == 10 * (i / 10) && i != 0)
-			dump = array_realloc(dump, 10);
+		if (j == 50 * (i / 50) && i != 0)
+			dump = array_realloc(dump, 50);
 		dump[i] = list;
 	}
 	free(dump);
