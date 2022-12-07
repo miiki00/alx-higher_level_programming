@@ -35,7 +35,6 @@ int is_palindrome(listint_t **head)
 	if (head == NULL || *head == NULL)
 		return (1);
 	length = listLength(*head);
-	printf("length: %ld\n", length);
 	top = *head;
 	for (i = 0, up = length - 1; i < length / 2; i++, top = top->next, up--)
 	{
