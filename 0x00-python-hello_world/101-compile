@@ -1,6 +1,2 @@
 #!/bin/bash
-
-#compiles a python source file that the name is stored int the PYFILE variabel
-python -c "import $PYFILE"
-cp __pycache__/${PYFILE:0:$((${#PYFILE} - 3))}.*.pyc ./${PYFILE}c
-rm -r __pycache__
+python -m compileall -b $PYFILE
