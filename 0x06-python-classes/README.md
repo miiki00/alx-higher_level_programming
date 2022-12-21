@@ -7,13 +7,13 @@ In this project from our school [ALX Holberton](https://www.alxafrica.com) we ha
 
 #### Before we start defining what OOP means lets define some key terms to understand OOP more naturally
 
-<ul><strong>Classes</strong></ul> : classes are your papers/canvas where you can draw what you object looks like what are it's attributes and so on.<br>
+<u><strong>Classes</strong></u> : classes are your papers/canvas where you can draw what you object looks like what are it's attributes and so on.<br>
 <br>
-<ul><strong>Objects</strong></ul> : objects are instances of your class were the attributes and shapes you puted on you paper(Class) gets reflected.<br>
+<u><strong>Objects</strong></u> : objects are instances of your class were the attributes and shapes you puted on you paper(Class) gets reflected.<br>
 <br>
-<ul><strong>Attribute</strong></ul> : attribute are propeties that define your object.<br>
+<u><strong>Attribute</strong></u> : attribute are propeties that define your object.<br>
 <br>
-<ul><strong>Methods</strong></ul> : Methos are like function but that belong to the class and can operate on the instance of the class.<br>
+<u><strong>Methods</strong></u> : Methos are like function but that belong to the class and can operate on the instance of the class.<br>
 <br>
 ### now let's define OOP
 > I am assuming that you have a prior knowledge in procedural programming when I put the defination here.<br>
