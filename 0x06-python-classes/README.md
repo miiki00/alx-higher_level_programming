@@ -15,8 +15,10 @@ In this project from our school [ALX Holberton](https://www.alxafrica.com) we ha
 <br>
 <u><strong>Methods</strong></u> : Methos are like function but that belong to the class and can operate on the instance of the class.<br>
 <br>
-### now let's define OOP
+### Now let's define OOP
+<br>
 > I am assuming that you have a prior knowledge in procedural programming when I put the defination here.<br>
+<br>
 Object-Oreinted Programming(OOP) is a programming pardigm where data and function are wraped together in a class where classes can be seen like types in procedural programming pardigm and instances/objects of the class can be seen like variables of some type in procedural programming pardigm. And also classes have function that help manipulate the attributes of an instance of the class
 
 #### Here are some linkes That were provided as a material to this project
