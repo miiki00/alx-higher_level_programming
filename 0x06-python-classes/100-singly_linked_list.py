@@ -61,7 +61,7 @@ class Node:
         if type(value) is int:
             self.__data = value
         else:
-            raise TypeError("data must be and integer")
+            raise TypeError("data must be an integer")
 
     @property
     def next_node(self):
