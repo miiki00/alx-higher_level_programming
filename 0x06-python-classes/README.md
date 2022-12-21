@@ -7,10 +7,14 @@ In this project from our school [ALX Holberton](https://www.alxafrica.com) we ha
 
 #### Before we start defining what OOP means lets define some key terms to understand OOP more naturally
 
-Classes : classes are your papers/canvas where you can draw what you object looks like what are it's attributes and so on.<br>
-Objects : objects are instances of your class were the attributes and shapes you puted on you paper(Class) gets reflected.<br>
-Attribute : attribute are propeties that define your object.<br>
-Methods : Methos are like function but that belong to the class and can operate on the instance of the class.<br>
+<ul><strong>Classes</strong></ul> : classes are your papers/canvas where you can draw what you object looks like what are it's attributes and so on.<br>
+<br>
+<ul><strong>Objects</strong></ul> : objects are instances of your class were the attributes and shapes you puted on you paper(Class) gets reflected.<br>
+<br>
+<ul><strong>Attribute</strong></ul> : attribute are propeties that define your object.<br>
+<br>
+<ul><strong>Methods</strong></ul> : Methos are like function but that belong to the class and can operate on the instance of the class.<br>
+<br>
 ### now let's define OOP
 > I am assuming that you have a prior knowledge in procedural programming when I put the defination here.<br>
 Object-Oreinted Programming(OOP) is a programming pardigm where data and function are wraped together in a class where classes can be seen like types in procedural programming pardigm and instances/objects of the class can be seen like variables of some type in procedural programming pardigm. And also classes have function that help manipulate the attributes of an instance of the class
