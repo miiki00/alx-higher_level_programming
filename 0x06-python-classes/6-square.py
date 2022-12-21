@@ -117,7 +117,8 @@ class Square:
 
         """ my_print
 
-        prints a Square object with '#' characters
+        prints a Square object with '#' characters on a given position by
+        it's attribute.
         Args:
             no Arguments
 
@@ -125,8 +126,9 @@ class Square:
             None
         """
 
-        cpy_position = self.position
-        print('\n' * cpy_position[1], end='')
+        if self.size != 0:
+            cpy_position = self.position
+            print('\n' * cpy_position[1], end='')
         for i in range(self.size):
             print(' ' * cpy_position[0], end='')
             print('#' * self.size)
