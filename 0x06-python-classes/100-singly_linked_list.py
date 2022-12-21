@@ -134,7 +134,7 @@ class SinglyLinkedList:
         if self.__head is None:
             new_node.next_node = old_node
             self.__head = new_node
-        elif old_node == self.__head and old_node.data > value:
+        elif old_node == self.__head and old_node.data >= value:
             new_node.next_node = old_node
             self.__head = new_node
         elif old_node.data >= value:
@@ -157,6 +157,9 @@ class SinglyLinkedList:
         nodes = self.__head
 
         while nodes is not None:
-            to_print += "{}\n".format(nodes.data)
+            if nodes.next_node is not None:
+                to_print += "{}\n".format(nodes.data)
+            else:
+                to_print += "{}".format(nodes.data)
             nodes = nodes.next_node
         return (to_print)
