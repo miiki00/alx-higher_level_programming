@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """
-This module contains a function that adds to number.
+This module contains a function that adds two numbers.
 Functions:
-    add_integer: add to integers.
+    add_integer: adds two integers.
 """
 
 
 def add_integer(a, b=98):
     """
-    This function adds two number a and b and the
+    This function adds two number a and b and
     returns the result.
 
     Args:
