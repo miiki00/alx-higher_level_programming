@@ -1,37 +1,54 @@
->>> import os, sys
->>> sys.path.insert(0, os.getcwd() + '/../')
->>> say_my_name = __import__('3-say_my_name').say_my_name
->>> firstName = "q"
->>> lastName = 'd'
->>> say_my_name(firstName, lastName)
-My name is q d
->>> firstName = "name"
->>> say_my_name(firstName)
-My name is name 
->>> firstName = "Your"
->>> lastName = "Name"
->>> say_my_name(firstName, lastName)
-My name is Your Name
->>> firstName = 233
->>> lastName = ("string",)
->>> say_my_name(firstName, lastName) # doctest: +ELLIPSIS
-Traceback (most recent call last):
-  ...
-TypeError: first_name must be a string
->>> firstName = {"string"}
->>> say_my_name(firstName) # doctest: +ELLIPSIS
-Traceback (most recent call last):
-  ...
-TypeError: first_name must be a string
->>> firstName = "string"
->>> lastName = ["string"]
->>> say_my_name(firstName, lastName) # doctest: +ELLIPSIS
-Traceback (most recent call last):
-  ...
-TypeError: last_name must be a string
->>> firstName = ("fjklds",)
->>> lastName = "string"
->>> say_my_name(firstName, lastName) # doctest: +ELLIPSIS
-Traceback (most recent call last):
-  ...
-TypeError: first_name must be a string
+    This is the documentation
+    for the module: 3-say_my_name
+==============================================
+
+Description: This module contains a function that prints first and last name in a
+formated way.
+
+Functions:
+    say_my_name(first_name, last_name=""):
+        Takes first and last name and prints it in this format.
+            eg :- firts_name = "Your"
+                  last_name = "Name"
+            output will be like this:
+                "My name is Your Name"
+
+Here is some sample input output:
+
+    >>> import os, sys
+    >>> sys.path.insert(0, os.getcwd() + '/../')
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> firstName = "q"
+    >>> lastName = 'd'
+    >>> say_my_name(firstName, lastName)
+    My name is q d
+    >>> firstName = "name"
+    >>> say_my_name(firstName)
+    My name is name 
+    >>> firstName = "Your"
+    >>> lastName = "Name"
+    >>> say_my_name(firstName, lastName)
+    My name is Your Name
+    >>> firstName = 233
+    >>> lastName = ("string",)
+    >>> say_my_name(firstName, lastName) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: first_name must be a string
+    >>> firstName = {"string"}
+    >>> say_my_name(firstName) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: first_name must be a string
+    >>> firstName = "string"
+    >>> lastName = ["string"]
+    >>> say_my_name(firstName, lastName) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: last_name must be a string
+    >>> firstName = ("fjklds",)
+    >>> lastName = "string"
+    >>> say_my_name(firstName, lastName) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: first_name must be a string

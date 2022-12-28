@@ -1,57 +1,73 @@
->>> import os, sys
->>> sys.path.insert(0, os.getcwd() + '/../')
->>> matrix_divided = __import__('2-matrix_divided').matrix_divided
->>> testList = []
->>> matrix_divided(testList, 2)
-[]
->>> testList = [[], [], []]
->>> matrix_divided(testList, 2)
-[[], [], []]
->>> testList = [[32, 34.2, 64.2],
-...             [2, 53.2, 65],
-...             [43, 65.5, 76.1]]
->>> matrix_divided(testList, 2)
-[[16.0, 17.1, 32.1], [1.0, 26.6, 32.5], [21.5, 32.75, 38.05]]
->>> matrix_divided(testList, 1)
-[[32.0, 34.2, 64.2], [2.0, 53.2, 65.0], [43.0, 65.5, 76.1]]
->>> testList = [[4]]
->>> matrix_divided(testList, 2)
-[[2.0]]
->>> testObject = "string"
->>> div = 2
->>> matrix_divided(testObject, div) # doctest: +ELLIPSIS
-Traceback (most recent call last):
-  ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
->>> testObject = [[32, 34, 54], "string", 32, 5]
->>> matrix_divided(testObject, div) # doctest: +ELLIPSIS
-Traceback (most recent call last):
-  ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
->>> testObject = [[32, 35, 757, 45, 76],
-...               [32, 43, 56, 76],
-...               [54, 675, 4]]
->>> matrix_divided(testObject, div) # doctest: +ELLIPSIS
-Traceback (most recent call last):
-  ...
-TypeError: Each row of the matrix must have the same size
->>> testObject = [[54, 65.5, 76],
-...               [54, 76, 87.4],
-...               [32, 43.5, "string"]]
->>> matrix_divided(testObject, div)
-Traceback (most recent call last):
-  ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
->>> testObject = [[32, 34.2, 64.2],
-...               [2, 53.2, 65],
-...               [43, 65.5, 76.1]]
->>> div = "string"
->>> matrix_divided(testObject, div) # doctest: +ELLIPSIS
-Traceback (most recent call last):
-  ...
-TypeError: div must be a number
->>> div = 0
->>> matrix_divided(testObject, div) # doctest: +ELLIPSIS
-Traceback (most recent call last):
-  ...
-ZeroDivisionError: division by zero
+    This is the documentation
+    for the module: 2-matrix_divided
+============================================
+
+Description: This module contains function that deal with matrix scalar arthimetic.
+
+Functions:
+     matrix_divided(matrix, div):
+        a function tha makes a scalar division of matrix.
+    matrix_check_input(matrix, div):
+        check the inputs passec to matrix if the are valid or not.
+    matrix_exception_msg(code):
+        internal function to manage matrix_divided error
+
+Here is some sample input output:
+
+    >>> import os, sys
+    >>> sys.path.insert(0, os.getcwd() + '/../')
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> testList = []
+    >>> matrix_divided(testList, 2)
+    []
+    >>> testList = [[], [], []]
+    >>> matrix_divided(testList, 2)
+    [[], [], []]
+    >>> testList = [[32, 34.2, 64.2],
+    ...             [2, 53.2, 65],
+    ...             [43, 65.5, 76.1]]
+    >>> matrix_divided(testList, 2)
+    [[16.0, 17.1, 32.1], [1.0, 26.6, 32.5], [21.5, 32.75, 38.05]]
+    >>> matrix_divided(testList, 1)
+    [[32.0, 34.2, 64.2], [2.0, 53.2, 65.0], [43.0, 65.5, 76.1]]
+    >>> testList = [[4]]
+    >>> matrix_divided(testList, 2)
+    [[2.0]]
+    >>> testObject = "string"
+    >>> div = 2
+    >>> matrix_divided(testObject, div) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> testObject = [[32, 34, 54], "string", 32, 5]
+    >>> matrix_divided(testObject, div) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> testObject = [[32, 35, 757, 45, 76],
+    ...               [32, 43, 56, 76],
+    ...               [54, 675, 4]]
+    >>> matrix_divided(testObject, div) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: Each row of the matrix must have the same size
+    >>> testObject = [[54, 65.5, 76],
+    ...               [54, 76, 87.4],
+    ...               [32, 43.5, "string"]]
+    >>> matrix_divided(testObject, div)
+    Traceback (most recent call last):
+      ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> testObject = [[32, 34.2, 64.2],
+    ...               [2, 53.2, 65],
+    ...               [43, 65.5, 76.1]]
+    >>> div = "string"
+    >>> matrix_divided(testObject, div) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: div must be a number
+    >>> div = 0
+    >>> matrix_divided(testObject, div) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    ZeroDivisionError: division by zero
