@@ -8,25 +8,38 @@ Functions:
     add_integer(a, b=98):
         adds two integers.
 
-Here is some expample input output of the function.
-
+    
+    # importing files and adding the parrent directory.
+    # I added the parrent directory because the module is there.
     >>> import os, sys
     >>> sys.path.insert(0, os.getcwd() + '/../')
     >>> add_integer = __import__('0-add_integer').add_integer
+
+Here some sample input out from the function:
+    
+    # checking if it handles invalid input
     >>> add_integer('fds', 32) # doctest: +ELLIPSIS
     Traceback (most recent call last):
      ...
     TypeError: a must be an integer
+
+
     >>> add_integer(32, 'fds') # doctest: +ELLIPSIS
     Traceback (most recent call last):
      ...
     TypeError: b must be an integer
+    
+    # checking if it works if only one value is passed.
     >>> check = add_integer(832)
     >>> result = 832 + 98
     >>> check == result
     True
+    
+    # checking is it works with two valid inputs.
+    # checking if the return value type is correct or not.
     >>> check = add_integer(32.32, 33.43)
     >>> type(check) == int
     True
     >>> check == 65
     True
+

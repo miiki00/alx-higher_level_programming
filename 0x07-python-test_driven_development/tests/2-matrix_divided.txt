@@ -12,38 +12,63 @@ Functions:
     matrix_exception_msg(code):
         internal function to manage matrix_divided error
 
-Here is some sample input output:
 
+    # importing and adding paths where local modules belong.
     >>> import os, sys
     >>> sys.path.insert(0, os.getcwd() + '/../')
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    
+Here is some sample input output:
+
+    # empty list test
     >>> testList = []
     >>> matrix_divided(testList, 2)
     []
+    
+    # list containing empty lists test
     >>> testList = [[], [], []]
     >>> matrix_divided(testList, 2)
     [[], [], []]
+    
+    # a valid input list test
     >>> testList = [[32, 34.2, 64.2],
     ...             [2, 53.2, 65],
     ...             [43, 65.5, 76.1]]
     >>> matrix_divided(testList, 2)
     [[16.0, 17.1, 32.1], [1.0, 26.6, 32.5], [21.5, 32.75, 38.05]]
+    
+    # a valid input list divided by 1.
+    # the return value should be the values them selves
+    # but with 2 decimal places.
     >>> matrix_divided(testList, 1)
     [[32.0, 34.2, 64.2], [2.0, 53.2, 65.0], [43.0, 65.5, 76.1]]
+    
+    # a list containing a list wiht one element test.
     >>> testList = [[4]]
     >>> matrix_divided(testList, 2)
     [[2.0]]
+    
+Tests on how the function handles invalid input:
+
+    # passing a none list object to matrix parameter.
+    # expected to rasise a TypeError
     >>> testObject = "string"
     >>> div = 2
     >>> matrix_divided(testObject, div) # doctest: +ELLIPSIS
     Traceback (most recent call last):
       ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+    
+    # passing a list containing different objects
+    # expcted to raise a TypeError
     >>> testObject = [[32, 34, 54], "string", 32, 5]
     >>> matrix_divided(testObject, div) # doctest: +ELLIPSIS
     Traceback (most recent call last):
       ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+    
+    # passing a list containing lists with different row length.
+    # expected to raise a TypeError
     >>> testObject = [[32, 35, 757, 45, 76],
     ...               [32, 43, 56, 76],
     ...               [54, 675, 4]]
@@ -51,6 +76,10 @@ Here is some sample input output:
     Traceback (most recent call last):
       ...
     TypeError: Each row of the matrix must have the same size
+    
+    # passing a list containg lists with different objects
+    # by different object other that float and integer.
+    # expected to raise a TypeError.
     >>> testObject = [[54, 65.5, 76],
     ...               [54, 76, 87.4],
     ...               [32, 43.5, "string"]]
@@ -58,6 +87,9 @@ Here is some sample input output:
     Traceback (most recent call last):
       ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+    
+    # passing a valid list and passing div pram a stirng.
+    # expected to raise a typeError
     >>> testObject = [[32, 34.2, 64.2],
     ...               [2, 53.2, 65],
     ...               [43, 65.5, 76.1]]
@@ -66,6 +98,9 @@ Here is some sample input output:
     Traceback (most recent call last):
       ...
     TypeError: div must be a number
+    
+    # passing a valid list and passing div param 0
+    # expect to raise a zeroDivisionError.
     >>> div = 0
     >>> matrix_divided(testObject, div) # doctest: +ELLIPSIS
     Traceback (most recent call last):

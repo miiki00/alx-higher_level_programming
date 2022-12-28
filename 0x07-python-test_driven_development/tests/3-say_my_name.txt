@@ -15,37 +15,58 @@ Functions:
 
 Here is some sample input output:
 
+    # importing and adding paths where local modules belongs in.
     >>> import os, sys
     >>> sys.path.insert(0, os.getcwd() + '/../')
     >>> say_my_name = __import__('3-say_my_name').say_my_name
+    
+    # one character test.
     >>> firstName = "q"
     >>> lastName = 'd'
     >>> say_my_name(firstName, lastName)
     My name is q d
+    
+    # single argument test
     >>> firstName = "name"
     >>> say_my_name(firstName)
     My name is name 
+    
+    # all arguments test.
     >>> firstName = "Your"
     >>> lastName = "Name"
     >>> say_my_name(firstName, lastName)
     My name is Your Name
+    
+This test how the function handles invalid input.
+
+    # both non str object test.
+    # expect to raise a TypeError
     >>> firstName = 233
     >>> lastName = ("string",)
     >>> say_my_name(firstName, lastName) # doctest: +ELLIPSIS
     Traceback (most recent call last):
       ...
     TypeError: first_name must be a string
+    
+    # single argument non str object test.
+    # expect to raise a TypeError
     >>> firstName = {"string"}
     >>> say_my_name(firstName) # doctest: +ELLIPSIS
     Traceback (most recent call last):
       ...
     TypeError: first_name must be a string
+    
+    # test with first_name string and last_name non string.
+    # expected to raise a TypeErro.
     >>> firstName = "string"
     >>> lastName = ["string"]
     >>> say_my_name(firstName, lastName) # doctest: +ELLIPSIS
     Traceback (most recent call last):
       ...
     TypeError: last_name must be a string
+    
+    # test with first_name non string and last_name string.
+    # expected to raise a TypeError.
     >>> firstName = ("fjklds",)
     >>> lastName = "string"
     >>> say_my_name(firstName, lastName) # doctest: +ELLIPSIS
