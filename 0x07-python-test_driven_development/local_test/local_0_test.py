@@ -28,3 +28,7 @@ class addIntegerTest(unittest.TestCase):
             add_integer(stri, 32)
         with self.assertRaises(TypeError):
             add_integer(32, li)
+
+
+if __name__ == "__main__":
+    unittest.main()

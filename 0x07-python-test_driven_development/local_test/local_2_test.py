@@ -79,3 +79,7 @@ class matrixDividedTest(unittest.TestCase):
         div = 0
         with self.assertRaises(ZeroDivisionError):
             matrix_divided(testObject, div)
+
+
+if __name__ == "__main__":
+    unittest.main()
