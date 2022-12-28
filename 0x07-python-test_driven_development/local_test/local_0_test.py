@@ -2,7 +2,9 @@
 """
 Test for the function add_integer.
 """
-import unittest, os, sys
+import unittest
+import os
+import sys
 sys.path.insert(0, os.getcwd() + '/../')
 add_integer = __import__('0-add_integer').add_integer
 

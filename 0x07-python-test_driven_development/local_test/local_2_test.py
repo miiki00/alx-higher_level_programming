@@ -2,7 +2,9 @@
 """
 Test for the function add_integer.
 """
-import unittest, os, sys
+import unittest
+import os
+import sys
 sys.path.insert(0, os.getcwd() + '/../')
 matrix_divided = __import__('2-matrix_divided').matrix_divided
 
@@ -14,12 +16,12 @@ class matrixDividedTest(unittest.TestCase):
         expected = testList
         self.assertEqual(matrix_divided(testList, 2), expected)
         # list containing empty lists
-        testList = [ [], [], []]
+        testList = [[], [], []]
         expected = testList
         self.assertEqual(matrix_divided(testList, 2.3), expected)
         # a valid input list.
         testList = [[32, 34.2, 64.2],
-                    [2, 53.2, 65], 
+                    [2, 53.2, 65],
                     [43, 65.5, 76.1]]
         expected = [[16.0, 17.1, 32.1],
                     [1.0, 26.6, 32.5],
@@ -39,6 +41,7 @@ class matrixDividedTest(unittest.TestCase):
         testList = [[4]]
         expected = [[2.0]]
         self.assertEqual(matrix_divided(testList, 2), expected)
+
     def test_input_validation(self):
         # passing a none list object to matrix parameter.
         # expected to rasise a TypeError
