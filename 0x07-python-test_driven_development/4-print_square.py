@@ -40,4 +40,4 @@ def print_square(size):
     if size != 0:
         print(toPrint)
         # if you want you can uncommnet the return statment.
-        return (toPrint)
+        #return (toPrint)
