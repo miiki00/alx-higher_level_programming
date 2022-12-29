@@ -9,6 +9,8 @@ sys.path.insert(0, os.getcwd() + '/../')
 say_my_name = __import__('3-say_my_name').say_my_name
 
 
+# if you want to run this test on the function you should first uncomment
+# the return statments on the functions
 class SayMyNameTest(unittest.TestCase):
     # test for correct functionality given valid input.
     def test_functionality(self):
