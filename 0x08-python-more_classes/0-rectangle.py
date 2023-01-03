@@ -8,4 +8,14 @@ Class:
 
 
 class Rectangle:
+    """
+    This module contains a definations of A rectangle objects
+    and methods to act upon them.
+
+    Methods:
+        No methods yet.
+
+    Attributes:
+        No attributes yet.
+    """
     pass
