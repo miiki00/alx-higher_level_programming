@@ -1,0 +1,46 @@
+    This is a documentation
+    for the module: 1-my_list
+===================================
+
+This module contains a class that is inherited from list and
+provides a method that  print a list in a sorted manner with
+out changing the orginal list.
+
+Classes:
+    MyList : This is a class that is inherited from list and
+    provides a method that  print a list in a sorted manner with
+    out changing the orginal list.
+
+Functions:
+    No functions.
+
+
+    # importing files and adding the parrent directory.
+    # I added the parrent directory because the module is there.
+    >>> import os, sys
+    >>> sys.path.insert(0, os.getcwd() + '/../')
+    >>> MyList = __import__('1-my_list').MyList
+    
+    # Test with completly descending ordered list of integers.
+    >>> testListInit = [10, 8, 6, 4, 2, 0]
+    >>> testList = MyList()
+    >>> for i in testListInit:
+    ...     testList.append(i)
+    >>> testList.print_sorted()
+    [0, 2, 4, 6, 8, 10]
+
+    # Test with ascendingly orders list of integers.
+    >>> testListInit = [0, 2, 4, 6, 8, 10]
+    >>> testList = MyList()
+    >>> for i in testListInit:
+    ...     testList.append(i)
+    >>> testList.print_sorted()
+    [0, 2, 4, 6, 8, 10]
+
+    # Test with randomly ordered list of intgers.
+    >>> testListInit = [83, 543, 65, 224, 64, 76, 87]
+    >>> testList = MyList()
+    >>> for i in testListInit:
+    ...     testList.append(i)
+    >>> testList.print_sorted()
+    [64, 65, 76, 83, 87, 224, 543]
