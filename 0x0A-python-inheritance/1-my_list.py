@@ -32,21 +32,9 @@ class MyList(list):
             You can uncomment the return statment if you need for any
             reasons I have used to test the function.
         """
-        swapped = True
         copyList = self.copy()
-        length = len(copyList)
+        copyList.sort()
 
-        while swapped:
-            swapped = False
-            i, j = 0, 1
-            while j < length:
-                if copyList[i] > copyList[j]:
-                    tmp = copyList[i]
-                    copyList[i] = copyList[j]
-                    copyList[j] = tmp
-                    swapped = True
-                i += 1
-                j += 1
         print(copyList)
         # if you want you can uncommnet the return statment.
         # return (copyList)
