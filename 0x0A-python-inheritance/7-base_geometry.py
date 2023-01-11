@@ -13,7 +13,14 @@ Functions:
 class BaseGeometry:
     """ BaseGeometry: Class
     A BaseGeometry class defination.
+
+    This is a documentation for the costructor method __init__.
+    Args:
+        No arguments.
     """
+
+    def __init__(self):
+        pass
 
     def area(self):
         """ area : method
