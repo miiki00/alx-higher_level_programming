@@ -1,0 +1,38 @@
+    This is the documentation
+    for the module: 7-base_geometry
+============================================
+
+This module contains the defination of the class BaseGeometry.
+Class:
+    BaseGeometry:
+Functions:
+    No functions.
+
+# this test is specifically for the function integer_validator.
+
+    # importing necessary files.
+    >>> import os
+    >>> import sys
+    >>> sys.path.insert(0, os.getcwd() + '/../')
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    
+    # initializing the object to test with
+    >>> bg = BaseGeometry()
+
+# testing functionlity with valid inputs
+    >>> bg.integer_validator("name", 12)
+    >>> bg.integer_validator("height", 12)
+    
+# testing how the method handles invalid input,.
+    # testing with non number input.
+    >>> bg.integer_validator("String", "string") # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    TypeError: String must be an integer
+
+    # testing with negative number.
+    >>> bg.integer_validator("string", -1) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+      ...
+    ValueError: string must be greater than 0
+
