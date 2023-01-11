@@ -2,9 +2,6 @@
 """
 This module contains the defination of the class BaseGeometry.
 
-Class:
-    BaseGeometry:
-
 Functions:
     No functions.
 """
@@ -45,8 +42,5 @@ class BaseGeometry:
         Return:
             None.
         """
-        if type(value) is int:
-            if value <= 0:
-                raise ValueError("{} must be greater than 0".format(name))
-        else:
-            raise TypeError("{} must be an integer".format(name))
+        if not issubclass(type(value), int):
+            
