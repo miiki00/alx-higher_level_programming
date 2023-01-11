@@ -19,6 +19,9 @@ class MyList(list):
     This a class that is inherited from the class list and
     provides a method that  print a list in a sorted manner with
     out changing the orginal list.
+
+    It inherits constructor from list class so you can look more
+    informationn of the on the documentation for the list class.
     """
     def print_sorted(self):
         """ print_sorted : method
