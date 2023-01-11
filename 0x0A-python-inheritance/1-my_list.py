@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-This module contains a class that is inherited from list and
+This module contains a class that is inherited list and
 provides a method that  print a list in a sorted manner with
 out changing the orginal list.
 
 Classes:
-    MyList : This is a class that is inherited from list and
+    MyList : This is a class that inherited list and
     provides a method that  print a list in a sorted manner with
     out changing the orginal list.
 
@@ -16,11 +16,11 @@ Functions:
 
 class MyList(list):
     """ MyList : Class.
-    This a class that is inherited from the class list and
+    This a class that inherite the class list and
     provides a method that  print a list in a sorted manner with
     out changing the orginal list.
 
-    It inherits constructor from list class so you can look more
+    It inherits list's constructor class so you can look more
     informationn of the on the documentation for the list class.
     """
     def print_sorted(self):
