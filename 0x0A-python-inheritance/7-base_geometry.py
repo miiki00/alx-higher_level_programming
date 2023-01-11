@@ -45,7 +45,8 @@ class BaseGeometry:
         Return:
             None.
         """
-        if not issubclass(type(value), int):
+        if type(value) is int:
+            if value <= 0:
+                raise TypeError("{} must be greater than 0".format(name))
+        else:
             raise TypeError("{} must be an integer".format(name))
-        if int(value) <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
