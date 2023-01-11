@@ -11,9 +11,6 @@ Functions:
 # this test is specifically for the function integer_validator.
 
     # importing necessary files.
-    >>> import os
-    >>> import sys
-    >>> sys.path.insert(0, os.getcwd() + '/../')
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
     
     # initializing the object to test with
