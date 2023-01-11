@@ -11,4 +11,7 @@ Functions:
 
 
 class BaseGeometry:
+    """ BaseGeometry: Class
+    A BaseGeometry class defination.
+    """
     pass
