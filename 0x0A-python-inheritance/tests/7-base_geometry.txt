@@ -8,28 +8,127 @@ Class:
 Functions:
     No functions.
 
-# this test is specifically for the function integer_validator.
+# chekcing docstring.
+    # Checking for module docstring:
+    >>> m = __import__("7-base_geometry").__doc__
+    >>> len(m) > 1
+    True
+
+    # Checking for class docstring:
+    >>> c = __import__("7-base_geometry").BaseGeometry.__doc__
+    >>> len(c) > 1
+    True
 
     # importing necessary files.
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-    
+
+    # Checking for method docstring:
+    >>> mod1 = __import__("7-base_geometry").BaseGeometry.area.__doc__
+    >>> len(mod1) > 1
+    True
+    >>> mod2 = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+    >>> len(mod2) > 1
+    True
+
     # initializing the object to test with
     >>> bg = BaseGeometry()
 
-# testing functionlity with valid inputs
+    # Checking for area method:
+    >>> bg.area() # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+    # Checking too many arguments for area:
+    >>> bg.area(1) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: area() takes 1 positional argument but 2 were given
+
+    # testing functionlity with valid inputs
     >>> bg.integer_validator("name", 12)
     >>> bg.integer_validator("height", 12)
     
-# testing how the method handles invalid input,.
+#testing how the method handles invalid input,.
     # testing with non number input.
     >>> bg.integer_validator("String", "string") # doctest: +ELLIPSIS
     Traceback (most recent call last):
-      ...
+    ...
     TypeError: String must be an integer
 
     # testing with negative number.
     >>> bg.integer_validator("string", -1) # doctest: +ELLIPSIS
     Traceback (most recent call last):
-      ...
+    ...
     ValueError: string must be greater than 0
 
+    # testing with invalid integer 0.
+    >>> bg.integer_validator("age", 0) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    ValueError: age must be greater than 0
+
+
+    # Checking for non-integer types:
+    >>> bg.integer_validator("bool", True) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: bool must be an integer
+    >>> bg.integer_validator("float", 1.5) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: float must be an integer
+    >>> bg.integer_validator("complex", complex(1, 1)) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: complex must be an integer
+    >>> bg.integer_validator("string", "hello") # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: string must be an integer
+    >>> bg.integer_validator("tuple", (1, 2)) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: tuple must be an integer
+    >>> bg.integer_validator("list", [1, 2, 3]) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: list must be an integer
+    >>> bg.integer_validator("dict", {"key": "value"}) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: dict must be an integer
+    >>> bg.integer_validator("set", {"hello", "world"}) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: set must be an integer
+    >>> bg.integer_validator("frozenset", frozenset(["hello", "world"])) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: frozenset must be an integer
+    >>> bg.integer_validator("bytes", b"bytes") # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: bytes must be an integer
+    >>> bg.integer_validator("bytearrays", bytearray(b"bytes")) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: bytearrays must be an integer
+
+    # Checking for no arguments to integer_validator:
+    >>> bg.integer_validator() # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    # Checking for only 1 argument to integer_validator:
+    >>> bg.integer_validator("integer") # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    # Checking for too many arguments:
+    >>> bg.integer_validator("integer", 1, 2) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
