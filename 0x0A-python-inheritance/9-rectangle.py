@@ -57,4 +57,4 @@ class Rectangle(BaseGeometry):
         """
         width = self.__width
         height = self.__height
-        return ("[{}] {}/{}".format(type(self).__name__, width, height))
+        return ("[Rectangle] {}/{}".format(width, height))
