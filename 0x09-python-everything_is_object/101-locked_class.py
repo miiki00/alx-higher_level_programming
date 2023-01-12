@@ -10,16 +10,10 @@ Classes:
 
 class LockedClass:
     """
-    This is a locked class meaning users can't create attributes dynamically.
+    Deomonestration of a locked class
     """
-    def __init__(self):
-        """constructory"""
-        pass
 
     def __setattr__(self, key, value):
-        """
-        manages how attributes are assigned.
-        """
         if key != "first_name":
             raise AttributeError("'{}' object has no attribute "
                                  "'{}'".format(type(self).__name__, key))
