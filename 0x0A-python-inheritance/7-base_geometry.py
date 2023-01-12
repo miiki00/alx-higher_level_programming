@@ -27,6 +27,7 @@ class BaseGeometry:
             The area of the BaseGeometry object.
         """
         raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
         """Validate a parameter as an integer.
         Args:
