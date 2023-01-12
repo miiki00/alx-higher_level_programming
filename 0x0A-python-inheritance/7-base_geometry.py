@@ -16,9 +16,6 @@ class BaseGeometry:
         No arguments.
     """
 
-    def __init__(self):
-        pass
-
     def area(self):
         """ area : method
         This method calculates the area of a BaseGeometry object
@@ -30,19 +27,16 @@ class BaseGeometry:
             The area of the BaseGeometry object.
         """
         raise Exception("area() is not implemented")
-
     def integer_validator(self, name, value):
-        """integer_validator: method
-        This methods wheater a value is a valid integer meaining '>=0'
-
+        """Validate a parameter as an integer.
         Args:
-            name(str): The name of the var to asigne value to.
-            value(int): The integer to assigne to name.
-
-        Return:
-            None.
+            name (str): The name of the parameter.
+            value (int): The parameter to validate.
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is <= 0.
         """
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
-        elif value <= 0:
-            raise TypeError("{} must be greater than 0".format(name))
+        if value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))
