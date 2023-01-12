@@ -1,31 +1,12 @@
 #!/usr/bin/python3
-"""
-This module contains the defination of the class BaseGeometry.
-
-Functions:
-    No functions.
-"""
+"""This module contains the defination of the class BaseGeometry."""
 
 
 class BaseGeometry:
-    """ BaseGeometry: Class
-    A BaseGeometry class defination.
-
-    This is a documentation for the costructor method __init__.
-    Args:
-        No arguments.
-    """
+    """ BaseGeometry: under construction"""
 
     def area(self):
-        """ area : method
-        This method calculates the area of a BaseGeometry object
-
-        Args:
-            No arguments.
-
-        Return:
-            The area of the BaseGeometry object.
-        """
+        """ area : not implemented yet"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
