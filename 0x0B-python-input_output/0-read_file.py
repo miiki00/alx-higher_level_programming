@@ -22,5 +22,5 @@ def read_file(filename=""):
     """
     if not filename:
         return
-    with open(filename) as myFile:
+    with open(filename, encoding='utf-8') as myFile:
         print(myFile.read(), end="")
