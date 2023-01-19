@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 This is script adds all arguments to a python list, and save them
 in to a json file called add_item.json
