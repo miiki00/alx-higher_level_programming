@@ -66,6 +66,11 @@ class Student:
             None.
         """
 
-        self.first_name = json['first_name']
-        self.last_name = json['last_name']
-        self.age = json['age']
+        jsonKeys = json.keys()
+
+        if 'first_name' in jsonKeys:
+            self.first_name = json['first_name']
+        if 'last_name' in jsonKeys:
+            self.last_name = json['last_name']
+        if 'age' in jsonKeys:
+            self.age = json['age']
