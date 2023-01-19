@@ -43,7 +43,7 @@ class Student:
         Return:
             The dictinary description of a Student object.
         """
-        if not attrs:
+        if attrs is None:
             return (self.__dict__)
         originalDict = self.__dict__
         filteredAttrs = []
