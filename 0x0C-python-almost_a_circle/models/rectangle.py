@@ -62,9 +62,9 @@ class Rectangle(Base):
             print("\n", end="")
 
         for i in range(self.height):
-            print(" " * self.x, char * self.width)
+            print(" " * self.x + char * self.width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         update: updates attributes of instance.
 
@@ -74,18 +74,28 @@ class Rectangle(Base):
             3rd: height
             4th: x
             5th: y
+          or keyworded:
+            id (int): Unique id to identify the object.
+            width (int): The widht to instantiate the rectangle object with.
+            height (int): The height to instantiate the rectangle object with.
+            x (int): The postion of the rectangle in x axis.
+            y (int): The postion of the rectangle in y asix.
 
         Return:
             None.
         """
-        try:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-            self.y = args[4]
-        except IndexError:
-            pass
+        if len(args) == 0:
+            for key, value in kwargs.items():
+                self.__setattr__(key, value)
+        else:
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except IndexError:
+                pass
 
     def __str__(self):
         """
