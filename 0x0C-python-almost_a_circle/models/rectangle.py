@@ -61,6 +61,20 @@ class Rectangle(Base):
         for i in range(self.height):
             print(char * self.width)
 
+    def __str__(self):
+        """
+        __str__: returns representation of the rctangle object.
+
+        Args:
+            None.
+
+        Return:
+            String representation of the rectangle object.
+        """
+        st_format = f"[{type(self).__name__}] ({self.id}) {self.x}/{self.y}\
+ - {self.width}/{self.height}"
+        return (st_format)
+
     @property
     def width(self):
         """Width : property.
