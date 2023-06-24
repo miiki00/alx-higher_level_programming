@@ -13,6 +13,11 @@ class Base:
     """Class: Base
     Base : The base class for all subclasses under it.
 
+    Attributes:
+        id (int): A unique id of the object being created.
+
+    This is a documentation for the constructor method.
+
     Args:
         id (int): A unique id of the object being created.
     """
