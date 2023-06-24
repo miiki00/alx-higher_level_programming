@@ -41,5 +41,5 @@ class Square(Rectangle):
             String representation of the square object.
         """
         st_format = f"[{type(self).__name__}] ({self.id}) {self.x}/{self.y}\
- - {self.width}/{self.height}"
+ - {self.width}"
         return (st_format)
