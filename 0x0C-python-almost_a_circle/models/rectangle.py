@@ -58,8 +58,34 @@ class Rectangle(Base):
             None.
         """
         char = "#"
+        for i in range(self.y):
+            print("\n", end="")
+
         for i in range(self.height):
-            print(char * self.width)
+            print(" " * self.x, char * self.width)
+
+    def update(self, *args):
+        """
+        update: updates attributes of instance.
+
+        Args:
+            1st: id
+            2nd: width
+            3rd: height
+            4th: x
+            5th: y
+
+        Return:
+            None.
+        """
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        except IndexError:
+            pass
 
     def __str__(self):
         """
