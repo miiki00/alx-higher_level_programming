@@ -47,6 +47,20 @@ class Rectangle(Base):
         """
         return (self.width * self.height)
 
+    def display(self):
+        """
+        display : display the rectange on the terminal.
+
+        Args:
+            None.
+
+        Return:
+            None.
+        """
+        char = "#"
+        for i in range(self.height):
+            print(char * self.width)
+
     @property
     def width(self):
         """Width : property.
