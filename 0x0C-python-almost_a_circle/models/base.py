@@ -77,3 +77,18 @@ class Base:
 
         with open(f"{cls.__name__}.json", "w") as file:
             file.write(json_rep)
+    
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        create: creates an object from a dictionary representation.
+
+        Args:
+            dictionary: the dictionary representation of the object.
+
+        Return:
+            The object created.
+        """
+        obj = cls(1, 2)
+        obj.update(**dictionary)
+        return (obj)
