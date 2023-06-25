@@ -56,7 +56,7 @@ class Base:
             None.
         """
         list_dict = []
-        if list_obj is not None:
+        if list_objs is not None:
             for i in list_objs:
                 list_dict.append(i.to_dictionary())
         else:
