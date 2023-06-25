@@ -56,9 +56,13 @@ class Base:
             None.
         """
         list_dict = []
-        for i in list_objs:
-            list_dict.append(i.to_dictionary())
+        if list_obj is not None:
+            for i in list_objs:
+                list_dict.append(i.to_dictionary())
+        else:
+            list_dict = None
+
         json_rep = cls.to_json_string(list_dict)
 
-        with open(f"{type(list_objs[0]).__name__}.json", "w") as file:
+        with open(f"{cls.__name__}.json", "w") as file:
             file.write(json_rep)
