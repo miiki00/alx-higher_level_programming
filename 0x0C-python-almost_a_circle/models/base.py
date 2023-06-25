@@ -77,7 +77,7 @@ class Base:
 
         with open(f"{cls.__name__}.json", "w") as file:
             file.write(json_rep)
-    
+
     @classmethod
     def create(cls, **dictionary):
         """
@@ -89,6 +89,9 @@ class Base:
         Return:
             The object created.
         """
-        obj = cls(1, 2)
+        i = 1
+        if cls.__name__ == "Square":
+            i = 0
+        obj = cls(1, i)
         obj.update(**dictionary)
         return (obj)
