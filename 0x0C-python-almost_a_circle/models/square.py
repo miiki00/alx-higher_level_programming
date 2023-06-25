@@ -61,6 +61,24 @@ class Square(Rectangle):
             except IndexError:
                 pass
 
+    def to_dictionary(self):
+        """
+        to_dictionary: Return the dictionary representation of instance
+                       of Square class.
+
+        Args:
+            None.
+
+        Return:
+            The dictionary representation of the object.
+        """
+
+        keys = ["id", "size", "x", "y"]
+        to_dict = {}
+        for i in keys:
+            to_dict[i] = self.__getattribute__(i)
+        return (to_dict)
+
     def __str__(self):
         """
         __str__: returns representation of the square object.
