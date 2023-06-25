@@ -79,6 +79,29 @@ class Base:
             file.write(json_rep)
 
     @classmethod
+    def load_from_file(cls):
+        """
+        load_from_file: loads json string and convert it to list of instances.
+
+        Args:
+            None.
+
+        Return:
+            the list of the loaded instances.
+        """
+        list_obj = []
+
+        try:
+            with open(f"{cls.__name__}.json", "r") as file:
+                json_string = file.read()
+            list_dict = cls.from_json_string(json_string)
+            for i in list_dict:
+                list_obj.append(cls.create(**i))
+        except FileNotFoundError:
+            pass
+        return (list_obj)
+
+    @classmethod
     def create(cls, **dictionary):
         """
         create: creates an object from a dictionary representation.
