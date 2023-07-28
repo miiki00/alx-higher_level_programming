@@ -20,7 +20,7 @@ class Rectangle {
    * print - an instance method that prints a Rectangle instance.
    */
   print () {
-    const printItem = 'X'
+    const printItem = 'X';
     let width = '';
 
     for (let i = 0; i < this.width; i++) {
