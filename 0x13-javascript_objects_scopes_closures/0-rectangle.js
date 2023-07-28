@@ -1,4 +1,4 @@
-#!/home/qelem/Documents/node-v14.4.0-linux-x64/bin/node
+#!/usr/bin/node
 
 /**
  * Rectangle: A class that defines a rectangle object.
